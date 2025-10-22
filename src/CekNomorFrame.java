@@ -45,26 +45,26 @@ public class CekNomorFrame extends javax.swing.JFrame {
         });
         
         // Menambahkan placeholder pada text angka
-        lblHasil.setText("Hasil Akan Muncul Di Sini ");
-        lblHasil.setForeground(Color.GRAY);
+        txtHasil.setText("Hasil Akan Muncul Di Sini ");
+        txtHasil.setForeground(Color.GRAY);
         
 
         // Menangani focus masuk dan keluar
-        lblHasil.addFocusListener(new java.awt.event.FocusAdapter() {
+        txtHasil.addFocusListener(new java.awt.event.FocusAdapter() {
             @Override
             public void focusGained(java.awt.event.FocusEvent evt) {
-                if (lblHasil.getForeground().equals(Color.GRAY) &&
-                lblHasil.getText().equals("Hasil Akan Muncul Di Sini ")) {
-                lblHasil.setText("");
-                lblHasil.setForeground(Color.BLACK);
+                if (txtHasil.getForeground().equals(Color.GRAY) &&
+                txtHasil.getText().equals("Hasil Akan Muncul Di Sini ")) {
+                txtHasil.setText("");
+                txtHasil.setForeground(Color.BLACK);
             }
         }
 
             @Override
             public void focusLost(java.awt.event.FocusEvent evt) {
-                if (lblHasil.getText().isEmpty()) {
-                    lblHasil.setText("Hasil Akan Muncul Di Sini ");
-                 lblHasil.setForeground(Color.GRAY);
+                if (txtHasil.getText().isEmpty()) {
+                    txtHasil.setText("Hasil Akan Muncul Di Sini ");
+                 txtHasil.setForeground(Color.GRAY);
                 }
             }
         
@@ -96,26 +96,26 @@ public class CekNomorFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        panelchkNomor = new javax.swing.JPanel();
+        mskAngka = new javax.swing.JLabel();
         txtAngka = new javax.swing.JTextField();
         chkPrima = new javax.swing.JCheckBox();
-        jLabel3 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         lblHasil = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        tblChk = new javax.swing.JButton();
+        tblRst = new javax.swing.JButton();
+        tblkluar = new javax.swing.JButton();
+        txtHasil = new javax.swing.JLabel();
+        lblJudul = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(44, 62, 80));
 
-        jPanel1.setBackground(new java.awt.Color(52, 73, 94));
-        jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        panelchkNomor.setBackground(new java.awt.Color(52, 73, 94));
+        panelchkNomor.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(236, 240, 241));
-        jLabel2.setText("Masukkan Angka:");
+        mskAngka.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        mskAngka.setForeground(new java.awt.Color(236, 240, 241));
+        mskAngka.setText("Masukkan Angka:");
 
         txtAngka.setForeground(new java.awt.Color(51, 51, 51));
         txtAngka.addActionListener(new java.awt.event.ActionListener() {
@@ -133,92 +133,92 @@ public class CekNomorFrame extends javax.swing.JFrame {
         chkPrima.setForeground(new java.awt.Color(236, 240, 241));
         chkPrima.setText("Cek Apakah Bilangan Prima");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(236, 240, 241));
-        jLabel3.setText("Hasil:");
+        lblHasil.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lblHasil.setForeground(new java.awt.Color(236, 240, 241));
+        lblHasil.setText("Hasil:");
 
-        jButton1.setBackground(new java.awt.Color(39, 174, 96));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Cek");
-        jButton1.setFocusPainted(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        tblChk.setBackground(new java.awt.Color(39, 174, 96));
+        tblChk.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        tblChk.setForeground(new java.awt.Color(255, 255, 255));
+        tblChk.setText("Cek");
+        tblChk.setFocusPainted(false);
+        tblChk.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                tblChkActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(241, 196, 15));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton2.setText("Reset");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        tblRst.setBackground(new java.awt.Color(241, 196, 15));
+        tblRst.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        tblRst.setText("Reset");
+        tblRst.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                tblRstActionPerformed(evt);
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(231, 76, 60));
-        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Keluar");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        tblkluar.setBackground(new java.awt.Color(231, 76, 60));
+        tblkluar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        tblkluar.setForeground(new java.awt.Color(255, 255, 255));
+        tblkluar.setText("Keluar");
+        tblkluar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                tblkluarActionPerformed(evt);
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("APLIKASI CEK NOMOR GENAP / GANJIL");
+        lblJudul.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        lblJudul.setForeground(new java.awt.Color(255, 255, 255));
+        lblJudul.setText("APLIKASI CEK NOMOR GENAP / GANJIL");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout panelchkNomorLayout = new javax.swing.GroupLayout(panelchkNomor);
+        panelchkNomor.setLayout(panelchkNomorLayout);
+        panelchkNomorLayout.setHorizontalGroup(
+            panelchkNomorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelchkNomorLayout.createSequentialGroup()
+                .addGroup(panelchkNomorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelchkNomorLayout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblHasil, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(panelchkNomorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtHasil, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(panelchkNomorLayout.createSequentialGroup()
+                                .addGroup(panelchkNomorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(chkPrima, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelchkNomorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                         .addComponent(txtAngka, javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(mskAngka, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelchkNomorLayout.createSequentialGroup()
+                                        .addComponent(tblChk, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(tblRst, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel3)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(tblkluar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lblHasil)))
+                    .addGroup(panelchkNomorLayout.createSequentialGroup()
                         .addGap(45, 45, 45)
-                        .addComponent(jLabel1)))
+                        .addComponent(lblJudul)))
                 .addContainerGap(20, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        panelchkNomorLayout.setVerticalGroup(
+            panelchkNomorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelchkNomorLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(lblJudul)
                 .addGap(17, 17, 17)
-                .addComponent(jLabel2)
+                .addComponent(mskAngka)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtAngka, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(chkPrima)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(panelchkNomorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tblChk, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tblRst, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tblkluar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
+                .addComponent(lblHasil)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblHasil, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtHasil, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(15, 15, 15))
         );
 
@@ -228,20 +228,20 @@ public class CekNomorFrame extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(0, 0, 0)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(panelchkNomor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(0, 0, 0))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(panelchkNomor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void tblChkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tblChkActionPerformed
         // TODO add your handling code here:
         try {
             int angka = Integer.parseInt(txtAngka.getText());
@@ -267,12 +267,12 @@ public class CekNomorFrame extends javax.swing.JFrame {
                 }
             }
             // Tampilkan hasil
-        lblHasil.setForeground(warnaHasil); // ubah warna teks hasil
-        lblHasil.setText(hasil);
+        txtHasil.setForeground(warnaHasil); // ubah warna teks hasil
+        txtHasil.setText(hasil);
 
             // Tampilkan hasil dengan JOptionPane
             JOptionPane.showMessageDialog(this, hasil, "Hasil", JOptionPane.INFORMATION_MESSAGE);
-            lblHasil.setText(hasil);
+            txtHasil.setText(hasil);
 
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(this, "Input tidak valid! Harap masukkan angka.", 
@@ -290,19 +290,19 @@ public class CekNomorFrame extends javax.swing.JFrame {
             if (n % i == 0) return false;
         }
         return true;
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_tblChkActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void tblRstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tblRstActionPerformed
         // TODO add your handling code here:
         txtAngka.setText("Masukkan Angka ");
         txtAngka.setForeground(Color.GRAY);
-        lblHasil.setText("Hasil Akan Muncul Di Sini");
-        lblHasil.setForeground(Color.GRAY);
+        txtHasil.setText("Hasil Akan Muncul Di Sini");
+        txtHasil.setForeground(Color.GRAY);
         chkPrima.setSelected(false);
         txtAngka.requestFocus();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_tblRstActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void tblkluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tblkluarActionPerformed
         // TODO add your handling code here:
         int pilihan = JOptionPane.showConfirmDialog(
         this,
@@ -318,7 +318,7 @@ public class CekNomorFrame extends javax.swing.JFrame {
     } else {
         // jika memilih "Tidak", tidak melakukan apa-apa
     }
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_tblkluarActionPerformed
 
     private void txtAngkaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAngkaKeyTyped
         // TODO add your handling code here:
@@ -369,14 +369,14 @@ public class CekNomorFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox chkPrima;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblHasil;
+    private javax.swing.JLabel lblJudul;
+    private javax.swing.JLabel mskAngka;
+    private javax.swing.JPanel panelchkNomor;
+    private javax.swing.JButton tblChk;
+    private javax.swing.JButton tblRst;
+    private javax.swing.JButton tblkluar;
     private javax.swing.JTextField txtAngka;
+    private javax.swing.JLabel txtHasil;
     // End of variables declaration//GEN-END:variables
 }
