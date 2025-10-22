@@ -118,11 +118,6 @@ public class CekNomorFrame extends javax.swing.JFrame {
         mskAngka.setText("Masukkan Angka:");
 
         txtAngka.setForeground(new java.awt.Color(51, 51, 51));
-        txtAngka.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtAngkaActionPerformed(evt);
-            }
-        });
         txtAngka.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtAngkaKeyTyped(evt);
@@ -242,7 +237,6 @@ public class CekNomorFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void tblChkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tblChkActionPerformed
-        // TODO add your handling code here:
         try {
             int angka = Integer.parseInt(txtAngka.getText());
             String hasil;
@@ -267,8 +261,8 @@ public class CekNomorFrame extends javax.swing.JFrame {
                 }
             }
             // Tampilkan hasil
-        txtHasil.setForeground(warnaHasil); // ubah warna teks hasil
-        txtHasil.setText(hasil);
+            txtHasil.setForeground(warnaHasil); // ubah warna teks hasil
+            txtHasil.setText(hasil);
 
             // Tampilkan hasil dengan JOptionPane
             JOptionPane.showMessageDialog(this, hasil, "Hasil", JOptionPane.INFORMATION_MESSAGE);
@@ -293,7 +287,7 @@ public class CekNomorFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_tblChkActionPerformed
 
     private void tblRstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tblRstActionPerformed
-        // TODO add your handling code here:
+        
         txtAngka.setText("Masukkan Angka ");
         txtAngka.setForeground(Color.GRAY);
         txtHasil.setText("Hasil Akan Muncul Di Sini");
@@ -303,7 +297,7 @@ public class CekNomorFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_tblRstActionPerformed
 
     private void tblkluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tblkluarActionPerformed
-        // TODO add your handling code here:
+        
         int pilihan = JOptionPane.showConfirmDialog(
         this,
         "Apakah Anda yakin ingin keluar dari aplikasi?",
@@ -321,16 +315,12 @@ public class CekNomorFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_tblkluarActionPerformed
 
     private void txtAngkaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtAngkaKeyTyped
-        // TODO add your handling code here:
+        
         char c = evt.getKeyChar();
         if (!Character.isDigit(c) && c != '.') {
         evt.consume(); // Menolak input non-angka
     }                                    
     }//GEN-LAST:event_txtAngkaKeyTyped
-
-    private void txtAngkaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAngkaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtAngkaActionPerformed
 
     /**
      * @param args the command line arguments
